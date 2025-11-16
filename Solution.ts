@@ -1,6 +1,7 @@
 
 function getModifiedArray(length: number, updates: number[][]): number[] {
     const valuesAfterAllUpdates: number[] = new Array(length).fill(0);
+    
     for (let [startIndex, endIndex, value] of updates) {
         valuesAfterAllUpdates[startIndex] += value;
         if (endIndex + 1 < length) {
