@@ -6,6 +6,7 @@
  */
 var getModifiedArray = function (length, updates) {
     const valuesAfterAllUpdates = new Array(length).fill(0);
+    
     for (let [startIndex, endIndex, value] of updates) {
         valuesAfterAllUpdates[startIndex] += value;
         if (endIndex + 1 < length) {
